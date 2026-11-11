@@ -1,8 +1,10 @@
 from langchain_groq import ChatGroq
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
+
 #SystemMessage is used to set the context of the conversation, HumanMessage is used to represent the user's input, and AIMessage is used to 
 # represent the model's response.
 #AIMessage is used to represent the model's response and HumanMessage is used to represent the user's input. 
+
 from dotenv import load_dotenv
 load_dotenv()
 
