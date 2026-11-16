@@ -9,7 +9,7 @@ from typing import Literal
 
 load_dotenv()
 
-model = ChatGroq(model = "openai/gpt-oss-20b")
+model = ChatGroq(model="openai/gpt-oss-20b")
 
 class Feedback(BaseModel):
     sentiment: Literal["positive", "negative"] = Field(description="Give the sentiment of the feedback")
@@ -46,3 +46,6 @@ chain = classifier_chain | branch_chain
 result = chain.invoke({"feedback":"This is a terrible smartphone"})
 
 print(result)
+
+chain.get_graph().print_ascii()
+
